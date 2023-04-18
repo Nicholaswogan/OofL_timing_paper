@@ -35,9 +35,9 @@ However, the lunar HSE depletion has explanations that do not require a Moneta i
 
 Recently, \citep{Wogan_2023} use photochemical models of post-impact atmospheres to show that impacts significantly smaller than Moneta can efficiently produce prebiotic molecules. In their simulations, impactor iron equilibrates with vaporized ocean water to generate atmospheric H$_2$, and CH$_4$ and NH$_3$ form thermochemically as the reducing steam atmosphere cools. Once steam condense to an ocean, subsequent photochemistry of the Titan-like atmosphere produces prebiotic nitriles. Modeling shows that the production of both HCN and HCCCN only occurs when $\mathrm{CH_4} / \mathrm{CO_2} \gtrsim 0.1$ while the atmosphere is hazy. In an optimistic scenario, which includes nickel catalyzed methane production, modeling suggests that $\mathrm{CH_4} / \mathrm{CO_2} > 0.1$ (i.e. significant nitriles) occurs for impacts $> 4 \times 10^{20}$ kg. In a pessimistic modeling case, which assumes only a fraction of impactor iron reacts with the atmosphere \citep{Citron_2022}, a $> 5 \times 10^{21}$ kg impactor is required to produce substantial HCN and HCCCN. Regardless of uncertainty, \citet{Wogan_2023} show that an impactor much smaller than Moneta could spark an origin of life, and that the \citet{Benner_2020} estimated timing for biopoesis could be inaccurate because it is based on Moneta.
 
-Here, we use the \citet{Wogan_2023} results, along with Monte-Carlo simulations of Earth's impact history to make an alternative estimate for when life most likely emerged during an RNA-first process. Our calculations accounts for the possibility of planet sterilization by impacts that vaporize the ocean \citep{Sleep_1989}. We assume that an ``origin of life impact'' is one that produces significant prebiotic molecules and is not subsequently followed by an ocean-vaporizing impact that destroys the biosphere without rekindling it. By considering the fraction of stochastic impact realizations that do not have an ``origin of life impact'', we also estimate the probability of life beginning on the early Earth if we were to rerun the tape.
+Here, we use the \citet{Wogan_2023} results, along with Monte-Carlo simulations of Earth's impact history to make an alternative estimate for when life most likely emerged during an RNA-first process. Our calculations account for the possibility of planet sterilization by impacts that vaporize the ocean \citep{Sleep_1989}. We assume that an ``life-starting impact'' is one that produces significant prebiotic molecules and is not subsequently followed by an ocean-vaporizing impact that destroys the biosphere. By considering the fraction of stochastic impact realizations that do not have an ``life-starting impact'', we also estimate the probability of life beginning on the early Earth if we were to rerun the tape.
 
-\section{Methods}
+\section{Methods} \label{sec:methods}
 The rate impacts hit Earth bigger than mass $m$ at age $t$ is given by
 
 \begin{equation}
@@ -97,6 +97,28 @@ The final collection of sampled impact histories can then be used to compute imp
   \includegraphics[width=0.65\textwidth]{figures/example_impact_histories.pdf}
   \caption{Caption}
   \label{fig:example_impact_histories}
+\end{figure}
+
+Figure \ref{fig:example_impact_histories} illustrates three of the 5000 impact histories computed with our Monte-Carlo approach (Section \ref{sec:methods}). In Figure \ref{fig:example_impact_histories}a, a Moneta-sized impact occurs at $\sim 4.43$ Ga delivering nearly all of Earth's mantle HSEs. The impact should also reduce the Hadean atmosphere creating conditions favorable for prebiotic chemistry. However, in this case, Moneta is not a life-starting impact because Moneta is followed by an ocean-vaporizing collision at $\sim 4.37$ Ga which we assume destroys any existing biosphere. Based on smoothed-particle hydrodynamics impact simulations, we nominally assume that 10\% of an impact's kinetic energy goes into vaporizing the ocean \citep[Appendix X,][]{Citron_2022}. Vaporizing the ocean requires $5 \times 10^{27}$ J, so a $> 5 \times 10^{28}$ J impact should deliver sufficient energy. In Figure \ref{fig:example_impact_histories}a, the last ocean-vaporizing impact is only $\sim 10^{20}$ kg (360 km) but has a large impact velocity of $32$ km/s giving it $5.12 \times 10^{28}$ J of kinetic energy. 
+
+Moneta also occurs in the Figure \ref{fig:example_impact_histories}b impact realization. In this scenario, any life created in the wake of Moneta should not be subsequently exterminated because Moneta is the last impact to vaporize the ocean.
+
+Figure \ref{fig:example_impact_histories}c shows a impact history where Moneta does not occur. Instead, Earth's mantle HSEs are delivered by multiple $10^{21}$ to $4 \times 10^{21}$ kg collisions. Whether this bombardment history would cause biopoesis depends on the required minimum impact mass to produce significant origin of life molecules. \citet{Wogan_2023} shows using photochemical models of post-impact atmospheres that, optimistically, an impact $> 4 \times 10^{20}$ kg should give rise to an atmosphere that makes significant prebiotic molecules. Under this optimistic requirement, the last ocean-vaporizing impact in Figure \ref{fig:example_impact_histories}c at 4.38 Ga with mass $3 \times 10^{21}$ kg could successfully start life. However, with pessimistic modeling assumptions, \citet{Wogan_2023} finds that a $> 5 \times 10^{21}$ kg impact is instead required for biopoesis. In this alternative scenario, an origin of life never occurs in Figure \ref{fig:example_impact_histories}c because there is no impact larger than $5 \times 10^{21}$ kg.
+
+
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.5\textwidth]{figures/probabilities_of_impacts.pdf}
+  \caption{Caption}
+  \label{fig:probabilities_of_impacts}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.85\textwidth]{figures/timing_and_mass.pdf}
+  \caption{Caption}
+  \label{fig:time_and_mass}
 \end{figure}
 
 
