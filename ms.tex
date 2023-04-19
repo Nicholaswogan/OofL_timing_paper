@@ -35,7 +35,7 @@ However, the lunar HSE depletion has explanations that do not require a Moneta i
 
 Recently, \citep{Wogan_2023} use photochemical models of post-impact atmospheres to show that impacts significantly smaller than Moneta can efficiently produce prebiotic molecules. In their simulations, impactor iron equilibrates with vaporized ocean water to generate atmospheric H$_2$, and CH$_4$ and NH$_3$ form thermochemically as the reducing steam atmosphere cools. Once steam condense to an ocean, subsequent photochemistry of the Titan-like atmosphere produces prebiotic nitriles. Modeling shows that the production of both HCN and HCCCN only occurs when $\mathrm{CH_4} / \mathrm{CO_2} \gtrsim 0.1$ while the atmosphere is hazy. In an optimistic scenario, which includes nickel catalyzed methane production, modeling suggests that $\mathrm{CH_4} / \mathrm{CO_2} > 0.1$ (i.e. significant nitriles) occurs for impacts $> 4 \times 10^{20}$ kg. In a pessimistic modeling case, which assumes only a fraction of impactor iron reacts with the atmosphere \citep{Citron_2022}, a $> 5 \times 10^{21}$ kg impactor is required to produce substantial HCN and HCCCN. Regardless of uncertainty, \citet{Wogan_2023} show that an impactor much smaller than Moneta could spark an origin of life, and that the \citet{Benner_2020} estimated timing for biopoesis could be inaccurate because it is based on Moneta.
 
-Here, we use the \citet{Wogan_2023} results, along with Monte-Carlo simulations of Earth's impact history to make an alternative estimate for when life most likely emerged during an RNA-first process. Our calculations account for the possibility of planet sterilization by impacts that vaporize the ocean \citep{Sleep_1989}. We assume that an ``life-starting impact'' is one that produces significant prebiotic molecules and is not subsequently followed by an ocean-vaporizing impact that destroys the biosphere. By considering the fraction of stochastic impact realizations that do not have an ``life-starting impact'', we also estimate the probability of life beginning on the early Earth if we were to rerun the tape.
+Here, we use the \citet{Wogan_2023} results, along with Monte-Carlo simulations of Earth's impact history to make an alternative estimate for when life most likely emerged during an RNA-first process. Our calculations account for the possibility of planet sterilization by impacts that vaporize the ocean \citep{Sleep_1989}. We assume that a life-starting impact is one that produces significant prebiotic molecules and is not subsequently followed by an ocean-vaporizing impact that destroys the biosphere. By considering the fraction of stochastic impact realizations that do not have an life-starting impact, we also estimate the probability of life beginning if we were to rerun Earth's clock.
 
 \section{Methods} \label{sec:methods}
 The rate impacts hit Earth bigger than mass $m$ at age $t$ is given by
@@ -45,12 +45,12 @@ The rate impacts hit Earth bigger than mass $m$ at age $t$ is given by
 \end{equation}
 Here, $S_0(m)$ is the size-frequency distribution of impactors normalized to a reference mass $m_0$ so that $S_0(m_0) = 1$. Also, $F_0(t)$ is the number of impacts per billion years with mass greater than $m_0$.
 
-We assume the size-frequency distribution of impactors is identical to the main-belt asteroids \citep[Extended Data Figure 1,][]{Marchi_2014}. Data for the frequency of main-belt asteroids only extends down to about 1 km diameter ($= 1.3 \times 10^{12} $ kg). To extend the distribution to smaller objects, we use the observed 1400 ratio between the frequency of $> 1$ km and $> 20$ km craters on the Moon. \citet{Morbidelli_2018} uses crater scaling relations to show that 1 km and 20 km craters on the Moon corresponds to 50 m and 1 km asteroids, respectively. The largest main belt asteroid is $\sim 1000$ km, so we log-linearly extrapolate to larger impactors (Figure \ref{fig:sfd_and_flux}). Finally, we normalize the size-frequency distribution to the impact mass required to make a 1 km crater on the moon (50 m object, $m_0 = 1.64 \times 10^{8}$ kg). Figure \ref{fig:sfd_and_flux}a shows the resulting size-frequency distribution.
+We assume the size-frequency distribution of impactors is identical to the main-belt asteroids \citep[Extended Data Figure 1,][]{Marchi_2014}. Data for the frequency of main-belt asteroids only extends down to about 1 km diameter ($1.3 \times 10^{12} $ kg). To extend the distribution to smaller objects, we use the observed 1400 ratio between the frequency of $> 1$ km and $> 20$ km craters on the Moon. \citet{Morbidelli_2018} uses crater scaling relations to show that 1 km and 20 km craters on the Moon corresponds to 50 m and 1 km asteroids, respectively. The largest main belt asteroid is $\sim 1000$ km, so we log-linearly extrapolate to larger impactors (Figure \ref{fig:sfd_and_flux}). Finally, we normalize the size-frequency distribution to the impact mass required to make a 1 km crater on the moon (50 m object, $m_0 = 1.64 \times 10^{8}$ kg). Figure \ref{fig:sfd_and_flux}a shows the resulting size-frequency distribution.
 
 \begin{figure}
   \centering
   \includegraphics[width=1.0\textwidth]{figures/SFD_and_flux.pdf}
-  \caption{Caption}
+  \caption{Our assumed (a) size-frequency distribution of impactors and (b) lunar cratering record. Most of the size-frequency distribution is identical to the main-belt asteroids \citep[Extended Data Figure 1,][]{Marchi_2014}. We extrapolate to objects $\lesssim 10^{11}$ kg using the observed frequency ratio of $> 1$ km and $> 20$ km lunar craters, and log-linearly extrapolate to asteroids $\gtrsim 10^{21}$ kg. The lunar cratering record is the red line in Figure 5 of \citet{Morbidelli_2018}.}
   \label{fig:sfd_and_flux}
 \end{figure}
 
@@ -95,7 +95,7 @@ The final collection of sampled impact histories can then be used to compute imp
 \begin{figure}
   \centering
   \includegraphics[width=0.65\textwidth]{figures/example_impact_histories.pdf}
-  \caption{Caption}
+  \caption{Three simulated impact histories of the 5000 derived from our Monte-Carlo approach (Section \ref{sec:methods}). Each vertical line indicates an impact of a mass shown by the y-axis.}
   \label{fig:example_impact_histories}
 \end{figure}
 
@@ -108,7 +108,7 @@ Figure \ref{fig:example_impact_histories}c shows a impact history where Moneta d
 \begin{figure}
   \centering
   \includegraphics[width=0.5\textwidth]{figures/probabilities_of_impacts.pdf}
-  \caption{Caption}
+  \caption{The probability of an impact-driven origin of life on Earth. The blue solid line is the probability of an impact occurring at least once. The orange dashed line is the probability of an impact without a subsequent ocean-vaporizing collision, which can be interpreted as the chance of an impact that starts life. Probabilities are shown as a function of the minimum impact mass to produce significant prebiotic molecules. Two plausible minimum masses are the \citet{Wogan_2023} optimistic and pessimistic scenarios indicated with vertical dotted lines. The shaded region between $2 \times 10^{22}$ and $6 \times 10^{22}$ kg are Moneta-sized impacts because they deliver most all of Earth's mantle HSEs. There is a 92\% chance of a life-starting impact in the \citet{Wogan_2023} optimistic case, and a 41\% chance in the pessimistic case.}
   \label{fig:probabilities_of_impacts}
 \end{figure}
 
@@ -117,15 +117,17 @@ As illustrated in Figure \ref{fig:example_impact_histories}, a life-starting imp
 \begin{figure}
   \centering
   \includegraphics[width=0.85\textwidth]{figures/timing_and_mass.pdf}
-  \caption{Caption}
+  \caption{The timing and mass of a life-starting impact on the early Earth. (a) considers an optimistic minimum impact mass needed to generate the molecules for an RNA origin of life and (b) examines a pessimistic minimum impact mass \citep{Wogan_2023}. In either (a) or (b), panels (i) and (ii) show probability distributions for the timing and mass, respectively, of the last impact the produces prebiotic molecules which does not have a later ocean-vaporizing collision. The vertical dashed lines on (a) i and (b) i plot are median values, and the vertical dotted lines are the 95\% confidence intervals. In an impact-driven origin of life, biopoesis most likely occurred $\sim 4.35$ Ga with a 95\% uncertainty between approximately 3.9 and 4.45 Ga.}
   \label{fig:time_and_mass}
 \end{figure}
 
 To estimate the most likely timing for the origin of life, we consider both the \citet{Wogan_2023} optimistic and pessimistic criteria. Figure \ref{fig:time_and_mass}a is the optimistic case, showing the timing (Figure \ref{fig:time_and_mass}a (i)) and mass (Figure \ref{fig:time_and_mass}a (ii)) of the last $> 4 \times 10^{20}$ kg impact for the 92\% of impact histories that do not experience later ocean vaporization. The median timing of a life-starting impact is 4.34 Ga with 95\% uncertainty between 3.89 and 4.46 Ga. The large uncertainty mostly stems from the stochastic, Poisson nature of asteroid bombardment. The probability distribution for the mass of the life-starting impact peaks at $4 \times 10^{20}$ kg and decreases with increasing mass because of the size-frequency distribution of asteroids (Figure \ref{fig:sfd_and_flux}a). There is only a 10\% chance that the impact is Moneta-sized (i.e., between $2 \times 10^{22}$ and $6 \times 10^{22}$ kg).
 
-The timing of an origin of life impact is qualitatively unchanged when instead adopting the \citet{Wogan_2023} pessimistic case, which requires a $> 5 \times 10^{21}$ kg impact without later ocean vaporization (Figure \ref{fig:time_and_mass}b). In this scenario, the median timing for life's origin is 4.36 Ga with 95\% a confidence interval spanning 3.94 to 4.49 Ga (Figure \ref{fig:time_and_mass}b (i)). Under these assumptions, the life-starting impact is Moneta-sized 31\% of the time (Figure \ref{fig:time_and_mass}b (ii)), which is more probable compared to ``optimistic'' case (Figure \ref{fig:time_and_mass}a (ii)).
+The timing of an origin of life impact is qualitatively unchanged when instead adopting the \citet{Wogan_2023} pessimistic case, which requires a $> 5 \times 10^{21}$ kg impact without later ocean vaporization (Figure \ref{fig:time_and_mass}b). In this scenario, the median timing for life's origin is 4.36 Ga with a 95\% confidence interval spanning 3.94 to 4.49 Ga (Figure \ref{fig:time_and_mass}b (i)). Under these assumptions, the life-starting impact is Moneta-sized 31\% of the time (Figure \ref{fig:time_and_mass}b (ii)), which is more probable compared to ``optimistic'' case (Figure \ref{fig:time_and_mass}a (ii)).
 
 \section{Discussion and Conclusions}
+
+
 
 \section*{Acknowledgements}
 
@@ -141,7 +143,7 @@ N.F.W. and D.C.C. were supported by the Simon's Collaboration on Origin of Life 
 \begin{figure}
   \centering
   \includegraphics[width=0.4\textwidth]{figures/velocity_distribution.pdf}
-  \caption{Caption}
+  \caption{Our assumed probability distribution for the velocity of impacts derived from modern observations of asteroid close approaches \citep{Park_2023}.}
   \label{fig:velocity_distribution}
 \end{figure}
 
