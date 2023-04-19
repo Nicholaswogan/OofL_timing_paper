@@ -73,8 +73,8 @@ The average number of impacts on Earth between time $t_1$ and $t_2$ with mass gr
 
 \begin{align}
 \begin{split}
-  N(m,t_1,t_2) &= \int_{t_1}^{t^2} f(t,m) dt \\
-  &= S_0(m) \int_{t_1}^{t^2} \frac{d N_0}{dt} dt \\
+  N(m,t_1,t_2) &= \int_{t_1}^{t_2} f(t,m) dt \\
+  &= S_0(m) \int_{t_1}^{t_2} \frac{d N_0}{dt} dt \\
   &= S_0(m) A_\oplus s_0 \left( 10^{a e^{b t_2} + c} - 10^{a e^{b t_1} + c} \right)
 \end{split}
 \end{align}
@@ -103,9 +103,7 @@ Figure \ref{fig:example_impact_histories} illustrates three of the 5000 impact h
 
 Moneta also occurs in the Figure \ref{fig:example_impact_histories}b impact realization. In this scenario, any life created in the wake of Moneta should not be subsequently exterminated because Moneta is the last impact to vaporize the ocean.
 
-Figure \ref{fig:example_impact_histories}c shows a impact history where Moneta does not occur. Instead, Earth's mantle HSEs are delivered by multiple $10^{21}$ to $4 \times 10^{21}$ kg collisions. Whether this bombardment history would cause biopoesis depends on the required minimum impact mass to produce significant origin of life molecules. \citet{Wogan_2023} shows using photochemical models of post-impact atmospheres that, optimistically, an impact $> 4 \times 10^{20}$ kg should give rise to an atmosphere that makes significant prebiotic molecules. Under this optimistic requirement, the last ocean-vaporizing impact in Figure \ref{fig:example_impact_histories}c at 4.38 Ga with mass $3 \times 10^{21}$ kg could successfully start life. However, with pessimistic modeling assumptions, \citet{Wogan_2023} finds that a $> 5 \times 10^{21}$ kg impact is instead required for biopoesis. In this alternative scenario, an origin of life never occurs in Figure \ref{fig:example_impact_histories}c because there is no impact larger than $5 \times 10^{21}$ kg.
-
-
+Figure \ref{fig:example_impact_histories}c shows a impact history where Moneta does not occur. Instead, Earth's mantle HSEs are delivered by multiple $10^{21}$ to $4 \times 10^{21}$ kg collisions. Whether this bombardment history would cause biopoesis depends on the required minimum impact mass to produce significant origin of life molecules. \citet{Wogan_2023} uses photochemical models of post-impact atmospheres to show that, optimistically, an impact $> 4 \times 10^{20}$ kg should give rise to an atmosphere that makes significant prebiotic molecules. Under this optimistic requirement, the last ocean-vaporizing impact in Figure \ref{fig:example_impact_histories}c at 4.38 Ga with mass $3 \times 10^{21}$ kg could successfully start life. However, with pessimistic modeling assumptions, \citet{Wogan_2023} finds that a $> 5 \times 10^{21}$ kg impact is instead required for biopoesis. In this alternative scenario, an origin of life never occurs in Figure \ref{fig:example_impact_histories}c because there is no impact larger than $5 \times 10^{21}$ kg.
 
 \begin{figure}
   \centering
@@ -114,6 +112,8 @@ Figure \ref{fig:example_impact_histories}c shows a impact history where Moneta d
   \label{fig:probabilities_of_impacts}
 \end{figure}
 
+As illustrated in Figure \ref{fig:example_impact_histories}, a life-starting impact does not occur in every simulated impact history. In our impact-driven model for the origin of life, biopoesis requires (1) an impact of sufficient mass to make prebiotic molecules and (2) the lack of a later ocean-vaporizing collision that destroys the biosphere without rekindling it. Figure \ref{fig:probabilities_of_impacts} shows the probability of conditions (1) and (2) occurring as a function of the minimum impact mass that produces prebiotic molecules. For example, consider the \citet{Wogan_2023} optimistic minimum mass of $4 \times 10^{20}$ kg indicated in Figure \ref{fig:probabilities_of_impacts}. All simulated impact histories have at least one impact bigger than $4 \times 10^{20}$ kg (blue line in Figure \ref{fig:probabilities_of_impacts}). However, the probability of the origin of life in this scenario is 92\%, because 8\% of the time the last $4 \times 10^{20}$ kg collision is followed by a smaller ocean-vaporizing impact that perhaps sterilizes the planet (orange dashed line in Figure \ref{fig:probabilities_of_impacts}). An origin of life is less probable if we consider the \citet{Wogan_2023} pessimistic minimum mass ($> 5 \times 10^{21}$ kg) to produce significant origin of life molecules. A $> 5 \times 10^{21}$ kg impact without later ocean vaporization occurs only 41\% of the time.
+
 \begin{figure}
   \centering
   \includegraphics[width=0.85\textwidth]{figures/timing_and_mass.pdf}
@@ -121,7 +121,9 @@ Figure \ref{fig:example_impact_histories}c shows a impact history where Moneta d
   \label{fig:time_and_mass}
 \end{figure}
 
+To estimate the most likely timing for the origin of life, we consider both the \citet{Wogan_2023} optimistic and pessimistic criteria. Figure \ref{fig:time_and_mass}a is the optimistic case, showing the timing (Figure \ref{fig:time_and_mass}a (i)) and mass (Figure \ref{fig:time_and_mass}a (ii)) of the last $> 4 \times 10^{20}$ kg impact for the 92\% of impact histories that do not experience later ocean vaporization. The median timing of a life-starting impact is 4.34 Ga with 95\% uncertainty between 3.89 and 4.46 Ga. The large uncertainty mostly stems from the stochastic, Poisson nature of asteroid bombardment. The probability distribution for the mass of the life-starting impact peaks at $4 \times 10^{20}$ kg and decreases with increasing mass because of the size-frequency distribution of asteroids (Figure \ref{fig:sfd_and_flux}a). There is only a 10\% chance that the impact is Moneta-sized (i.e., between $2 \times 10^{22}$ and $6 \times 10^{22}$ kg).
 
+The timing of an origin of life impact is qualitatively unchanged when instead adopting the \citet{Wogan_2023} pessimistic case, which requires a $> 5 \times 10^{21}$ kg impact without later ocean vaporization (Figure \ref{fig:time_and_mass}b). In this scenario, the median timing for life's origin is 4.36 Ga with 95\% a confidence interval spanning 3.94 to 4.49 Ga (Figure \ref{fig:time_and_mass}b (i)). Under these assumptions, the life-starting impact is Moneta-sized 31\% of the time (Figure \ref{fig:time_and_mass}b (ii)), which is more probable compared to ``optimistic'' case (Figure \ref{fig:time_and_mass}a (ii))
 
 \section{Discussion and Conclusions}
 
