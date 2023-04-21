@@ -6,7 +6,7 @@
 \begin{document}
 
 % Title
-\title{Earth's Impact History and the Timing of the Origin of Life}
+\title{The Timing and Likelihood of the Origin of Life from Earth's Impact History}
 
 % Authors
 \author{Nicholas F. Wogan}
@@ -35,7 +35,7 @@ However, the lunar HSE depletion has explanations that do not require a Moneta i
 
 Recently, \citep{Wogan_2023} use photochemical models of post-impact atmospheres to show that impacts significantly smaller than Moneta can efficiently produce prebiotic molecules. In their simulations, impactor iron equilibrates with vaporized ocean water to generate atmospheric H$_2$, and CH$_4$ and NH$_3$ form thermochemically as the reducing steam atmosphere cools. Once steam condense to an ocean, subsequent photochemistry of the Titan-like atmosphere produces prebiotic nitriles. Modeling shows that the production of both HCN and HCCCN only occurs when $\mathrm{CH_4} / \mathrm{CO_2} \gtrsim 0.1$ while the atmosphere is hazy. In an optimistic scenario, which includes nickel catalyzed methane production, modeling suggests that $\mathrm{CH_4} / \mathrm{CO_2} > 0.1$ (i.e. significant nitriles) occurs for impacts $> 4 \times 10^{20}$ kg. In a pessimistic modeling case, which assumes only a fraction of impactor iron reacts with the atmosphere \citep{Citron_2022}, a $> 5 \times 10^{21}$ kg impactor is required to produce substantial HCN and HCCCN. Regardless of uncertainty, \citet{Wogan_2023} show that an impactor much smaller than Moneta could spark an origin of life, and that the \citet{Benner_2020} estimated timing for biopoesis could be inaccurate because it is based on Moneta.
 
-Here, we use the \citet{Wogan_2023} results, along with Monte-Carlo simulations of Earth's impact history to make an alternative estimate for when life most likely emerged during an RNA-first process. Our calculations account for the possibility of planet sterilization by impacts that vaporize the ocean \citep{Sleep_1989}. We assume that a life-starting impact is one that produces significant prebiotic molecules and is not subsequently followed by an ocean-vaporizing impact that destroys the biosphere. By considering the fraction of stochastic impact realizations that do not have an life-starting impact, we also estimate the probability of life beginning if we were to rerun Earth's clock.
+Here, we use the \citet{Wogan_2023} results, along with Monte-Carlo simulations of Earth's impact history to make an alternative estimate for when life most likely emerged during an RNA-first process. Our calculations account for the possibility of planet sterilization by impacts that vaporize the ocean \citep{Sleep_1989}. We assume that a life-starting impact is one that produces significant prebiotic molecules and is not subsequently followed by an ocean-vaporizing impact that destroys the biosphere. By considering the fraction of stochastic impact realizations that do not have an life-starting impact, we also estimate the probability of life beginning if Earth's clock was rerun.
 
 \section{Methods} \label{sec:methods}
 The rate impacts hit Earth bigger than mass $m$ at age $t$ is given by
@@ -125,6 +125,8 @@ To estimate the most likely timing for the origin of life, we consider both the 
 
 The timing of an origin of life impact is qualitatively unchanged when instead adopting the \citet{Wogan_2023} pessimistic case, which requires a $> 5 \times 10^{21}$ kg impact without later ocean vaporization (Figure \ref{fig:time_and_mass}b). In this scenario, the median timing for life's origin is 4.36 Ga with a 95\% confidence interval spanning 3.94 to 4.49 Ga (Figure \ref{fig:time_and_mass}b (i)). Under these assumptions, the life-starting impact is Moneta-sized 31\% of the time (Figure \ref{fig:time_and_mass}b (ii)), which is more probable compared to ``optimistic'' case (Figure \ref{fig:time_and_mass}a (ii)).
 
+% A caveat to the results above is that ocean-vaporization by an impact is likely a complicated function of impact mass, velocity, and incident angle, which we do not account for (Appendix \ref{sec:append_vap}). Through this section we have assumed that 10\% of an impactor's kinetic energy heats the planetary surface ($f_\mathrm{E,vap} = 0.1$), leading to a required $> 5 \times 10^{28}$ J collision to vaporize an ocean. Appendix Figure \ref{fig:energy_for_ocean_vap} uses simulations of impacts from \citet{Citron_2022} to show that $f_\mathrm{E,vap} = 0.1$ is a reasonable assumption, but that values between 2.5\% and 25\% are also possible and that $f_\mathrm{E,vap}$ likely also depends on impact angle.
+
 \section{Discussion and Conclusions}
 
 We use Monte-Carlo simulations of Earth's impact history to determine the most likely timing for the origin of life in an RNA-first processes. We make use of results of \citep{Wogan_2023}, who find that significant origin of life molecules, such as HCN, are produced in the Hadean atmosphere after a $> 4 \times 10^{20}$ kg impact in an optimistic case, and after a $> 5 \times 10^{21}$ kg impact in a pessimistic scenario. We consider both possibilities, and assume such impacts can cause life's origin so long as they are not followed by a smaller ocean-vaporizing collision that sterilizes the planet.
@@ -156,6 +158,38 @@ N.F.W. and D.C.C. were supported by the Simon's Collaboration on Origin of Life 
   \label{fig:velocity_distribution}
 \end{figure}
 
+\section{Impact energy required for ocean vaporization} \label{sec:append_vap}
+
+Recently, \citet{Citron_2022} performed smoothed-particle hydrodynamics impact simulations over a wide range of impact angles, masses and velocities to estimate the impact properties that vaporize the ocean. Figure \ref{fig:energy_for_ocean_vap}a shows their simulation results for the change in the atmosphere's and ocean's internal energy ($\Delta IE_\mathrm{atmo}$) as a function of impact kinetic energy ($E_\mathrm{imp}$), along with log-linear extrapolations for each impact angle. Figure \ref{fig:energy_for_ocean_vap} gives the same information, but the y-axis is instead the fraction of the impactor's energy that heats the atmosphere and ocean. For the most probable impact angle of $45^\circ$ about $\sim 10\%$ of the impactors kinetic energy heats the atmosphere ($f_\mathrm{E,vap} = 0.1$), so we nominally adopt this value in the main text to determine which collisions vaporize the ocean.
+
+Energy delivery to the atmosphere/ocean appears to depend on impact angle, mass and velocity (Figure \ref{fig:energy_for_ocean_vap}). Additionally, all of the \citet{Citron_2022} simulations are far more massive than the minimum threshold for ocean-vaporization, so we must rely on extrapolations. Therefore, our assumption of a constant $f_\mathrm{E,vap} = 0.1$ is an over-simplification. To remedy this shortcoming, we considered building a parameterization for $f_\mathrm{E,vap}$ that depends on multiple impact properties (e.g., impact angle) using the \citet{Citron_2022} simulation results, but this was unsuccessful because the calculations do not consider a wide enough parameter space.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\textwidth]{figures/energy_for_ocean_vap.pdf}
+  \caption{\citet{Citron_2022} smoothed-particle hydrodynamics simulations that show how much impactor kinetic energy heats the atmosphere and ocean. Different colors indicated various incident impact angles. (a) shows the simulated change in internal energy of the atmosphere and ocean as a function of the impactor energy, with log-linear extrapolations for each impact angle. The dotted horizontal line at $5 \times 10^{27}$ J indicates the energy needed to vaporize an ocean \citep{Sleep_1989}. (b) contains the same information as (a), except the y-axis is the fraction of impactor energy that heats the atmosphere and ocean.}
+  \label{fig:energy_for_ocean_vap}
+\end{figure}
+
+The evaluate the sensitivity of our results to an assumed constant $f_\mathrm{E,vap} = 0.1$, we recomputed the likelihood and timing of a life-starting impact using $f_\mathrm{E,vap} = 0.025$ and $f_\mathrm{E,vap} = 0.25$ (Figure \ref{fig:probabilities_of_impacts_sens} and \ref{fig:timing_sensitivity}). We chose these values because they are possible lower and upper bounds based on the \citet{Citron_2022} simulations (Figure \ref{fig:energy_for_ocean_vap}b). The probability of a impact that produces substantial prebiotic molecules without later ocean vaporization decreases with increasing $f_\mathrm{E,vap}$ (Figure \ref{fig:probabilities_of_impacts_sens}). For example, for $f_\mathrm{E,vap} = 0.1$, the probability of a $>4 \times 10^{20}$ kg impact (\citet{Wogan_2023} optimistic case) without subsequent ocean vaporization is 92\%. For $f_\mathrm{E,vap} = 0.025$ and $f_\mathrm{E,vap} = 0.25$ the probabilities are instead 99.9\% and 60\%, respectively.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.5\textwidth]{figures/probabilities_of_impacts_sens.pdf}
+  \caption{Similar to Figure \ref{fig:probabilities_of_impacts}, except we consider different values for the fraction of impactor energy that heats the ocean.}
+  \label{fig:probabilities_of_impacts_sens}
+\end{figure}
+
+Figure \ref{fig:timing_sensitivity} shows the timing of the last impact to make conditions favorable for biopoesis that does not experience subsequent ocean vaporization for $f_\mathrm{E,vap}$ values of 0.025, 0.1 (nominal value), and 0.25. Like in the main text, we consider the \citet{Wogan_2023} optimistic (Figure \ref{fig:timing_sensitivity}a) and pessimistic (Figure \ref{fig:timing_sensitivity}b) minimum impactor masses to produce significant prebiotic molecules. In Figure \ref{fig:timing_sensitivity}a, the timing of the last life-starting impact is relatively insensitive to $f_\mathrm{E,vap}$. In the \citet{Wogan_2023} pessimistic case (Figure \ref{fig:timing_sensitivity}b), an origin of life is preferred later in the Hadean for larger values of $f_\mathrm{E,vap}$.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.85\textwidth]{figures/timing_sensitivity.pdf}
+  \caption{Similar to Figure \ref{fig:time_and_mass}, except we consider different values for the fraction of impactor energy that heats the ocean.}
+  \label{fig:timing_sensitivity}
+\end{figure}
+
+Overall, uncertainty in the impact properties required to vaporize the ocean has a small effect on our qualitative conclusions. Regardless of $f_\mathrm{E,vap}$, the origin of life on Earth from an impact does not appear to be anomalously improbable (Figure \ref{fig:probabilities_of_impacts_sens}) and biopoesis is preferred early in the Hadean with uncertainty spanning the entire eon (Figure \ref{fig:timing_sensitivity}). However, it is conceivable that a more complete understanding $f_\mathrm{E,vap}$ as a function of impact angle and other impact parameters could change these results.
 
 \bibliography{bib}
 \bibliographystyle{aasjournal}
