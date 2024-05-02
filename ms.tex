@@ -1,25 +1,27 @@
 % Define document class
-\documentclass[]{aastex631}
+\documentclass[]{Liebert_Author}
 \usepackage{tabularx}
 \usepackage{amsmath}
-
-\begin{document}
+\usepackage{aas_macros}
+\usepackage{geometry}
+\geometry{margin=1in}
 
 % Title
 \title{Timing and Likelihood of the Origin of Life Derived from Post-Impact Highly Reducing Atmospheres}
 
 % Authors
-\author{Nicholas F. Wogan}
-\affiliation{Space Science Division, NASA Ames Research Center, Moffett Field, CA 94035}
-\affiliation{Virtual Planetary Laboratory, University of Washington, Seattle, WA98195}
+\author{Nicholas F. Wogan,$^{1\ast}$ David C. Catling,$^{2}$ Kevin J. Zahnle$^{1}$\\
+{$^{1}$Space Science Division, NASA Ames Research Center,}\\
+{Moffett Field, CA 94035, USA}\\
+{$^{2}$Department of Earth and Space Sciences, University of Washington,}\\
+{Seattle, WA 98195, USA}\\
+{$^\ast$To whom correspondence should be addressed;}\\
+{E-mail: nicholas.f.wogan@nasa.gov}
+}
 
-\author{David C. Catling}
-\affiliation{Department of Earth and Space Sciences, University of Washington, Seattle, WA 98195}
-\affiliation{Virtual Planetary Laboratory, University of Washington, Seattle, WA98195}
+\begin{document} 
 
-\author{Kevin J. Zahnle}
-\affiliation{Space Science Division, NASA Ames Research Center, Moffett Field, CA 94035}
-\affiliation{Virtual Planetary Laboratory, University of Washington, Seattle, WA98195}
+\maketitle 
 
 \begin{abstract}
   Big impacts on the early Earth would have created highly reducing atmospheres that generated molecules needed for the origin of life, such as nitriles. However, such impactors can be followed by collisions that were sufficiently big to vaporize the ocean and destroy any pre-existing life. Thus, a post-impact reducing atmosphere that gives rise to life needs to be followed by a lack of subsequent sterilizing impacts for life to persist. We assume that prebiotic chemistry required a post-impact reducing atmosphere. Then, using statistics for the impact history on Earth and the minimum impact mass needed to generate post-impact highly reducing atmospheres, we show that the median timing of impact-driven biopoiesis is favored early in the Hadean, $\sim 4.35$ Ga. However, uncertainties are large because impact bombardment is stochastic, so biopoiesis could have occurred between 4.45 and 3.9 Ga within 95\% uncertainty. In an optimistic scenario for biopoiesis from post-impact reducing atmospheres, we find that the origin of life is favorable in $\sim 90\%$ of stochastic impact realizations. In our most pessimistic case, biopoiesis is still fairly likely ($\sim 20\%$ chance). This potentially bodes well for life on rocky exoplanets which will have experienced an early episode of impact bombardment given how planets form.
@@ -234,7 +236,7 @@ Figure \ref{fig:timing_sensitivity} shows the timing of the last impact to make 
 
 Overall, uncertainty in the impact properties required to vaporize the ocean has a small effect on our qualitative conclusions. Regardless of $f_\mathrm{E,vap}$, the origin of life on Earth from an impact does not appear to be a fluke (Figure \ref{fig:probabilities_of_impacts_sens}) and biopoiesis is preferred early in the Hadean with uncertainty spanning the entire eon (Figure \ref{fig:timing_sensitivity}). However, it is conceivable that a more complete understanding $f_\mathrm{E,vap}$ as a function of impact angle and other impact parameters could change these results.
 
+\bibliographystyle{plainnat}
 \bibliography{bib}
-\bibliographystyle{aasjournal}
 
 \end{document}
