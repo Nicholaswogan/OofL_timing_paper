@@ -1,6 +1,8 @@
 {
   "doxdocgen.generic.boolReturnsTrueFalse": false,
   "latex-workshop.latex.outDir": "output",
+  // "latex-workshop.view.pdf.invert": 1,
+  // "latex-workshop.view.pdf.invertMode.brightness": 1.0,
   "editor.wordWrap": "on",
   "cSpell.words": [
     "abiotically",
