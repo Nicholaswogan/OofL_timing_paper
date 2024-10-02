@@ -6,21 +6,12 @@
 \usepackage{aas_macros}
 \usepackage{geometry}
 \geometry{margin=1in}
+\usepackage{float}
 
 % \usepackage{mathtools,amsthm,amsfonts,amssymb}
 % \usepackage[round]{natbib}
 % \usepackage[hidelinks,breaklinks=true]{hyperref}
 \usepackage[title]{appendix}
-
-% The Header
-\usepackage{fancyhdr}
-\fancyhf{}
-\fancypagestyle{mystyle}{
-\fancyhead[L]{\textbf{Appendix}}
-\fancyfoot[C]{\thepage}}
-\fancyfoot[C]{\thepage}
-\renewcommand\headrulewidth{0pt}
-\pagestyle{fancy}
 
 % Title
 \title{Timing and Likelihood of the Origin of Life Derived from Post-Impact Highly Reducing Atmospheres}
@@ -192,14 +183,14 @@ We thank our two reviewers for providing thoughtful comments that improved this 
 
 \begin{appendices}
 
-\thispagestyle{mystyle} % Puts "Appendix in the header"
+\appendixpage
 
 \renewcommand{\thefigure}{A\arabic{figure}}
 \renewcommand{\thetable}{A\arabic{table}}
 \setcounter{figure}{0}
 \setcounter{table}{0}
 
-\begin{figure}
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.4\textwidth]{figures/velocity_distribution.pdf}
   \caption{Our assumed probability distribution for the velocity of impacts derived from modern observations of asteroid close approaches \citep{Park_2023}.}
