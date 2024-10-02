@@ -1,10 +1,26 @@
 % Define document class
-\documentclass[]{Liebert_Author}
+\documentclass{Liebert_Author}
+% \documentclass{article}
 \usepackage{tabularx}
 \usepackage{amsmath}
 \usepackage{aas_macros}
 \usepackage{geometry}
 \geometry{margin=1in}
+
+% \usepackage{mathtools,amsthm,amsfonts,amssymb}
+% \usepackage[round]{natbib}
+% \usepackage[hidelinks,breaklinks=true]{hyperref}
+\usepackage[title]{appendix}
+
+% The Header
+\usepackage{fancyhdr}
+\fancyhf{}
+\fancypagestyle{mystyle}{
+\fancyhead[L]{\textbf{Appendix}}
+\fancyfoot[C]{\thepage}}
+\fancyfoot[C]{\thepage}
+\renewcommand\headrulewidth{0pt}
+\pagestyle{fancy}
 
 % Title
 \title{Timing and Likelihood of the Origin of Life Derived from Post-Impact Highly Reducing Atmospheres}
@@ -163,13 +179,20 @@ If life began after an impact that generated a reducing atmosphere, then this wo
 
 \section*{Acknowledgements}
 
-We thank our two reviewers, who provided thoughtful comments that improved this article. Additionally, we thank Roger Buick for reading an early draft of this article and providing useful feedback. We also thank Steve Warren for reading an early draft and correcting several grammatical errors. N.F.W. and D.C.C. were supported by the Simon's Collaboration on Origin of Life Grant 511570 (to D.C.C.). Also, N.F.W., D.C.C., and K.J.Z. were supported by NASA Astrobiology Program Grant 80NSSC18K0829 and benefited from participation in the NASA Nexus for Exoplanet Systems Science research coordination network. N.F.W. and D.C.C. also acknowledge support from Sloan Foundation Grant G-2021-14194.
+We thank our two reviewers for providing thoughtful comments that improved this article. Additionally, we thank Roger Buick for reading an early draft of this paper and giving useful feedback. We also thank Steve Warren for reading an early draft and correcting several grammatical errors. N.F.W. and D.C.C. were supported by the Simon's Collaboration on Origin of Life Grant 511570 (to D.C.C.). Also, N.F.W., D.C.C., and K.J.Z. were supported by NASA Astrobiology Program Grant 80NSSC18K0829 and benefited from participation in the NASA Nexus for Exoplanet Systems Science research coordination network. N.F.W. and D.C.C. also acknowledge support from Sloan Foundation Grant G-2021-14194.
 
-\section*{Software}
+\bibliographystyle{plainnat}
+\bibliography{bib}
 
-The source code needed to install the necessary software and reproduce all main text calculations (i.e., Figures \ref{fig:example_impact_histories} to \ref{fig:time_and_mass}) is archived on Zenodo: \url{https://doi.org/10.5281/zenodo.11051955} \citep{Wogan_2024_reproduce}.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% EVERYTHING BELOW HERE IS THE APPENDIX %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\appendix
+\newpage
+
+\begin{appendices}
+
+\thispagestyle{mystyle} % Puts "Appendix in the header"
 
 \renewcommand{\thefigure}{A\arabic{figure}}
 \renewcommand{\thetable}{A\arabic{table}}
@@ -236,7 +259,10 @@ Figure \ref{fig:timing_sensitivity} shows the timing of the last impact to make 
 
 Overall, uncertainty in the impact properties required to vaporize the ocean has a small effect on our qualitative conclusions. Regardless of $f_\mathrm{E,vap}$, the origin of life on Earth from an impact does not appear to be a fluke (Figure \ref{fig:probabilities_of_impacts_sens}) and biopoiesis is preferred early in the Hadean with uncertainty spanning the entire eon (Figure \ref{fig:timing_sensitivity}). However, it is conceivable that a more complete understanding $f_\mathrm{E,vap}$ as a function of impact angle and other impact parameters could change these results.
 
-\bibliographystyle{plainnat}
-\bibliography{bib}
+\section{Software}
+
+The source code needed to install the necessary software and reproduce all main text calculations (i.e., Figures \ref{fig:example_impact_histories} to \ref{fig:time_and_mass}) is archived on Zenodo: \url{https://doi.org/10.5281/zenodo.11051955} \citep{Wogan_2024_reproduce}.
+
+\end{appendices}
 
 \end{document}
